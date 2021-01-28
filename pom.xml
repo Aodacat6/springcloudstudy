@@ -15,7 +15,9 @@
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
         <lombok-version>1.18.10</lombok-version>
-        <spring-boot.spring-boot.version>2.0.6.RELEASE</spring-boot.spring-boot.version>
+        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <web.version>2.0.6.RELEASE</web.version>
+        <actuator.version>2.0.6.RELEASE</actuator.version>
     </properties>
 
     <modules>
@@ -27,6 +29,7 @@
         <module>usermanager</module>
         <module>zuul</module>
         <module>config</module>
+        <module>all-dto</module>
     </modules>
 
     <dependencyManagement>
@@ -41,13 +44,18 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>${spring-boot.spring-boot.version}</version>
+                <version>${spring-boot.version}</version>
             </dependency>
             <!--不加这个会提示gson找不到，网上说加2.6以上版本即可，确实-->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>2.8.5</version>
+            </dependency>
+            <!-- 链路追踪 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-sleuth</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>
