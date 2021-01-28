@@ -11,5 +11,15 @@
 
     <artifactId>all-dto</artifactId>
 
+    <name>all-dto</name>
+    <description>全工程dto集合</description>
 
+    <dependencies>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>

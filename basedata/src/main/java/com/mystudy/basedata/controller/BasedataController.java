@@ -1,5 +1,9 @@
 package com.mystudy.basedata.controller;
 
+import com.mystudy.Dtos.basedata.StudentDto;
+import com.mystudy.basedata.service.impl.StudentServiceImpl;
+import com.sun.corba.se.impl.javax.rmi.CORBA.StubDelegateImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class BasedataController {
 
+    @Autowired
+    private StudentServiceImpl studentService;
+
     @GetMapping("/test")
     public String test () {
         return "success";
+    }
+
+    @GetMapping("/get")
+    public StudentDto get() {
+        return studentService.test();
     }
 }

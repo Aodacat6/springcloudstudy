@@ -18,6 +18,17 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.mystudy</groupId>
+            <artifactId>all-dto</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!--注意这个client依赖，不是spring-cloud-netflix-eureka-client,要加starter-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
