@@ -17,3 +17,8 @@ eureka:
 info:
   app:
     name: ${spring.application.name}
+
+demo:
+  isOpen: true
+  name: ming
+  age: 18

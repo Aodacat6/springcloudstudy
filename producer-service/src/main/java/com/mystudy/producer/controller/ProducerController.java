@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 /**
  * @author ：songdalin
  * @date ：2021-01-28 下午 04:03
@@ -25,4 +27,11 @@ public class ProducerController {
     public StudentDto get() {
         return producerService.test();
     }
+
+    @GetMapping("/getrest")
+    public StudentDto getrest() {
+        return producerService.testRest();
+    }
+
+
 }

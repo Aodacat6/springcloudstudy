@@ -4,6 +4,9 @@ import com.mystudy.Dtos.basedata.StudentDto;
 import com.mystudy.producer.client.BasedataClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 /**
  * @author ：songdalin
@@ -18,8 +21,16 @@ public class ProducerServiceImpl {
     @Autowired
     private BasedataClient basedataClient;
 
+    //@Autowired
+    @Resource
+    private RestTemplate restTemplate;
+
     public StudentDto test() {
         return basedataClient.get();
+    }
+
+    public StudentDto testRest() {
+        return restTemplate.getForObject("http://localhost:8080/basedata/get", StudentDto.class);
     }
 
 }
