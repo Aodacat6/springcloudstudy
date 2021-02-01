@@ -29,8 +29,9 @@ public class ProducerServiceImpl {
         return basedataClient.get();
     }
 
-    public StudentDto testRest() {
-        return restTemplate.getForObject("http://localhost:8080/basedata/get", StudentDto.class);
+    public String testRest() {
+        //ribbon请求，绑定servername即可
+        return restTemplate.getForObject("http://basedata/basedata/balance", String.class);
     }
 
 }

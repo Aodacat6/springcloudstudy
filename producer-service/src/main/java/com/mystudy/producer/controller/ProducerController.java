@@ -29,7 +29,7 @@ public class ProducerController {
     }
 
     @GetMapping("/getrest")
-    public StudentDto getrest() {
+    public String getrest() {
         return producerService.testRest();
     }
 
