@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
-    name: basedata
+    name: producer-service
 
 eureka:
   instance:
@@ -11,12 +11,10 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:18761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8761/eureka
 
 #用于审计接口  actuator/info 返回信息
 info:
   app:
     name: ${spring.application.name}
-
-
 

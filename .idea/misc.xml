@@ -5,12 +5,12 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/basedata/pom.xml" />
-        <option value="$PROJECT_DIR$/consumer-service/pom.xml" />
         <option value="$PROJECT_DIR$/eureka/pom.xml" />
         <option value="$PROJECT_DIR$/im-server/pom.xml" />
         <option value="$PROJECT_DIR$/producer-service/pom.xml" />
         <option value="$PROJECT_DIR$/usermanager/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-ds/pom.xml" />
       </list>
     </option>
   </component>

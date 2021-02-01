@@ -22,8 +22,8 @@
 
     <modules>
         <module>basedata</module>
-        <module>consumer-service</module>
         <module>eureka</module>
+        <module>eureka-ds</module>
         <module>im-server</module>
         <module>producer-service</module>
         <module>usermanager</module>

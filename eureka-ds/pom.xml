@@ -9,13 +9,28 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+
+    <name>eureka-ds</name>
+    <description>注册中心</description>
+
+
     <groupId>com.mystudy</groupId>
-    <artifactId>consumer-service</artifactId>
+    <artifactId>eureka-ds</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+
+
+    </dependencies>
 
     
 </project>

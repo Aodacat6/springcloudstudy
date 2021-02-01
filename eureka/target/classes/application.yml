@@ -13,6 +13,9 @@ eureka:
     register-with-eureka: false
     #是否需要拉取服务信息，默认未true
     fetch-registry: false
+    service-url:
+      #eureka 集群配置
+      defaultZone: http://127.0.0.1:18761/eureka
   server:
     #自我保护机制，开启后 服务断了，eureka会提示emergency
     enable-self-preservation: false

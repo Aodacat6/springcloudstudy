@@ -6,13 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="all-dto" />
         <module name="zuul" />
+        <module name="producer-service" />
         <module name="basedata" />
-        <module name="consumer-service" />
+        <module name="eureka-ds" />
         <module name="im-server" />
         <module name="eureka" />
-        <module name="producer-service" />
+        <module name="eureka (1)" />
+        <module name="all-dto" />
         <module name="config" />
         <module name="usermanager" />
       </profile>
@@ -23,6 +24,8 @@
       <module name="config" target="1.5" />
       <module name="consumer-service" target="1.5" />
       <module name="eureka" target="1.5" />
+      <module name="eureka (1)" target="1.5" />
+      <module name="eureka-ds" target="1.5" />
       <module name="im-server" target="1.5" />
       <module name="producer-service" target="1.5" />
       <module name="springcloudstudy" target="1.5" />
