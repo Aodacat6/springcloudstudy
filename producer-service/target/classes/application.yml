@@ -17,3 +17,7 @@ eureka:
 info:
   app:
     name: ${spring.application.name}
+
+feign:
+  hystrix:
+    enabled: true

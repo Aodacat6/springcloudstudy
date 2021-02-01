@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @modified By：
  * @version: 1.0
  */
-@FeignClient(name = "basedata", path = "/basedata")
+@FeignClient(name = "basedata", path = "/basedata", fallback = BasedataClientFallback.class)
 public interface BasedataClient {
 
     @GetMapping("/get")
