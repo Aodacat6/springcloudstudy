@@ -3,6 +3,7 @@ package com.mystudy.basedata.controller;
 import com.mystudy.Dtos.basedata.StudentDto;
 import com.mystudy.basedata.service.impl.StudentServiceImpl;
 import com.sun.corba.se.impl.javax.rmi.CORBA.StubDelegateImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @modified By：
  * @version: 1.0
  */
+@Slf4j
 @RestController
 @RequestMapping("/basedata")
 public class BasedataController {
@@ -38,6 +40,7 @@ public class BasedataController {
 
     @GetMapping("/balance")
     public String testBalance() {
+        log.info("=====trace======");
         return "==============:" + port;
     }
 }
