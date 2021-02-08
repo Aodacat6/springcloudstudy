@@ -1,0 +1,18 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Aodacat6/springcloudconfig
+          username: Aodacat6
+          password:
+          default-label: main
+
+
+
+

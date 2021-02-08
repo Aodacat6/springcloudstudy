@@ -1,0 +1,31 @@
+#bootstrap  优先于 application 启动，所以可以把需要的参数加载到空间
+#防止application.yml里没有对应的属性，启动失败
+
+#application.yml 的内容优先级低于 bootstrap.yml
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:8010
+      profile: dev
+      label: main
+      #name: spring-cloud-config-client
+
+---
+spring:
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      uri: http://127.0.0.1:8010
+      profile: pro
+      label: main
+      #name: spring-cloud-config-client
+  profiles: pro

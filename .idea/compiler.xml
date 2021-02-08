@@ -6,14 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="all-dto" />
         <module name="zuul" />
-        <module name="producer-service" />
         <module name="basedata" />
         <module name="eureka-ds" />
+        <module name="eureka (1)" />
         <module name="im-server" />
         <module name="eureka" />
-        <module name="eureka (1)" />
-        <module name="all-dto" />
+        <module name="producer-service" />
+        <module name="config-client" />
         <module name="config" />
         <module name="usermanager" />
       </profile>
@@ -22,6 +23,7 @@
       <module name="all-dto" target="1.5" />
       <module name="basedata" target="1.5" />
       <module name="config" target="1.5" />
+      <module name="config-client" target="1.5" />
       <module name="consumer-service" target="1.5" />
       <module name="eureka" target="1.5" />
       <module name="eureka (1)" target="1.5" />

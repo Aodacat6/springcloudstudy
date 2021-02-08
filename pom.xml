@@ -30,6 +30,7 @@
         <module>zuul</module>
         <module>config</module>
         <module>all-dto</module>
+        <module>config-client</module>
     </modules>
 
     <dependencyManagement>

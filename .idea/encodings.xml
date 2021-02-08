@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/all-dto/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basedata/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basedata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-ds/src/main/java" charset="UTF-8" />

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/all-dto/all-dto.iml" filepath="$PROJECT_DIR$/all-dto/all-dto.iml" />
       <module fileurl="file://$PROJECT_DIR$/basedata/basedata.iml" filepath="$PROJECT_DIR$/basedata/basedata.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-ds/eureka (1).iml" filepath="$PROJECT_DIR$/eureka-ds/eureka (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-ds/eureka-ds.iml" filepath="$PROJECT_DIR$/eureka-ds/eureka-ds.iml" />
