@@ -1,7 +1,7 @@
 package com.mystudy.producer.configuration;
 
+import com.mystudy.producer.MyRibbonRule;
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,6 +18,7 @@ public class RibbonConfig {
     @Bean
     public IRule iRule () {
         //返回负载策略
-        return new RandomRule();
+        //return new RandomRule();
+        return new MyRibbonRule();
     }
 }
