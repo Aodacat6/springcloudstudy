@@ -23,7 +23,6 @@
     <modules>
         <module>basedata</module>
         <module>eureka</module>
-        <module>eureka-ds</module>
         <module>im-server</module>
         <module>producer-service</module>
         <module>usermanager</module>
@@ -72,6 +71,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--这个插件解决了每次刷新maven， module jdk自动变为1.8的问题-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

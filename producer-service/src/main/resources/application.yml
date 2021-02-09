@@ -5,6 +5,12 @@ spring:
   application:
     name: producer-service
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
 eureka:
   instance:
     #以IP地址注册到服务中心，相互注册使用IP地址
