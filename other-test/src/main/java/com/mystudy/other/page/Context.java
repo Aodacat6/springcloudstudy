@@ -24,7 +24,8 @@ public class Context {
      *      1、类的实例化：即类执行完构造器后，还没填充属性
      *      2、类的初始化：类完成属性注入
      *
-     *
+     * 一句话来概括一下：
+     *       Spring通过将实例化后的对象提前暴露给Spring容器中的singletonFactories，解决了循环依赖的问题
      *
      *
      * @param args
