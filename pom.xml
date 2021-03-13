@@ -30,6 +30,9 @@
         <module>config</module>
         <module>all-dto</module>
         <module>config-client</module>
+        <module>netty</module>
+        <module>netty-client</module>
+        <module>rabbitmq</module>
     </modules>
 
     <dependencyManagement>
@@ -62,6 +65,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.10</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
