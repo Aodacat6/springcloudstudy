@@ -33,6 +33,7 @@
         <module>netty</module>
         <module>netty-client</module>
         <module>rabbitmq</module>
+        <module>other-test</module>
     </modules>
 
     <dependencyManagement>
