@@ -40,4 +40,11 @@ public class MqController {
         rabbitTemplate.convertAndSend("Direct-Exchange", "mq.direct", message);
         System.out.println("发送完毕！！！");
     }
+
+    @GetMapping("/topic")
+    public void topic() {
+        rabbitTemplate.convertAndSend("Topic-Exchange", "mq.topic1.lala", "这是topic1 的消息");
+        rabbitTemplate.convertAndSend("Topic-Exchange", "mq.topic2", "这是topic2 的消息");
+        System.out.println("发送完毕！！！");
+    }
 }

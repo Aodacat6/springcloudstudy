@@ -16,7 +16,7 @@ import java.util.Map;
  * @version: 1.0
  */
 @Configuration
-public class RabbitMQConfig {
+public class DirectMQConfig {
 
     @Bean("directExchange")
     public DirectExchange directExchange() {
