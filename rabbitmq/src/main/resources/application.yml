@@ -12,4 +12,7 @@ spring:
     password: admin
     virtual-host: dev
 
-
+    listener:
+      simple:
+        acknowledge-mode: manual    #确认模式，手工确认还是自动确认
+        prefetch: 1      #限量 ，同时只能消费一条数据，ack后才消费下一条
