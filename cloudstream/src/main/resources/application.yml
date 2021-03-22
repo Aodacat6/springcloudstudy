@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: stream
+
+  cloud:
+    stream:
+      rabbit:   #这里设置rabbitmq的队列属性
+        bindings:
+          myInput:
+            consumer:
+              ttl: 30000    #队列过期时间
+              autoBindDlq: true  #自动绑定死信队列
+      binders:
+        rabbit-binder:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: admin
+                password: admin
+                virtual-host: dev
+
+      bindings:
+        myInput:     #自定义channel
+          destination: myMqStream   #自定义exchange （队列也是这个名字）
+          group: groupA     #消费组概念  同一个消费组内的消息只能被消费一次
+        myOutput:
+          destination: myMqStream

@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/all-dto/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basedata/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basedata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudstream/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudstream/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/src/main/java" charset="UTF-8" />
@@ -13,8 +15,16 @@
     <file url="file://$PROJECT_DIR$/eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/im-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/other-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/other-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/producer-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/producer-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usermanager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usermanager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul/src/main/java" charset="UTF-8" />
