@@ -35,6 +35,7 @@
         <module>rabbitmq</module>
         <module>other-test</module>
         <module>cloudstream</module>
+        <module>springtest</module>
     </modules>
 
     <dependencyManagement>

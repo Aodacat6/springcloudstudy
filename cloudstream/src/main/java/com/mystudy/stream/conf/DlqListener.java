@@ -23,13 +23,14 @@ public class DlqListener {
      * 死信队列消费
      * @param message
      */
-    @RabbitListener(
+/*    @RabbitListener(
             bindings = @QueueBinding(
                     value = @Queue("myMqStream.groupA.dlq")
                     , exchange = @Exchange("DLX")
                     , key = "myMqStream.groupA"
             )
-    )
+    )*/
+    @RabbitListener
     public void listen(Message message) {
         System.out.println("死信队列消费：" + new String(message.getBody()));
     }
