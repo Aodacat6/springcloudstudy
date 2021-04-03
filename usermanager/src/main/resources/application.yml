@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+
+
+#sping-security   方式一：自定义用户名密码
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
