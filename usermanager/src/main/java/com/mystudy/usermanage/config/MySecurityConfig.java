@@ -50,6 +50,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //配置403界面
+        http.exceptionHandling().accessDeniedPage("/unauth.html");
+
         http.formLogin()
                 .loginPage("/login.html")           //自定义登录页
                 .loginProcessingUrl("/user/login")  //登录页动作
@@ -60,7 +63,10 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/test/index")
                 //设置需要的权限 (单指一个权限)
                 //.hasAuthority("admins")
-                .hasAnyAuthority("admins,user")
+                //.hasAnyAuthority("admins,user")
+                //根据角色区分权限
+                //.hasRole("admins")
+                .hasAnyRole("admins,user")
                 .anyRequest().authenticated()  //除了白名单，都需要验证
                 .and()
                 .csrf().disable();

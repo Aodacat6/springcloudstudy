@@ -47,8 +47,11 @@ public class MyUserDetailsService implements UserDetailsService {
         SysUser sysUser = optional.get();
 
         //设置用户角色权限
+//        List<GrantedAuthority> list =
+//                AuthorityUtils.commaSeparatedStringToAuthorityList("admins");
+        //角色设置，需要加  ROLE_
         List<GrantedAuthority> list =
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admins");
+                AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_admins,ROLE_user");
         return new User(sysUser.getLoginName(), new BCryptPasswordEncoder().encode(sysUser.getPassword()), list);
     }
 
