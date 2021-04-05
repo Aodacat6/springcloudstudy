@@ -50,13 +50,17 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //退出操作
+        http.logout().logoutUrl("/logout")
+                .logoutSuccessUrl("/test/hello").permitAll();
+
         //配置403界面
         http.exceptionHandling().accessDeniedPage("/unauth.html");
 
         http.formLogin()
                 .loginPage("/login.html")           //自定义登录页
                 .loginProcessingUrl("/user/login")  //登录页动作
-                .defaultSuccessUrl("/test/index").permitAll()  //登录成功后跳转
+                .defaultSuccessUrl("/success.html").permitAll()  //登录成功后跳转
                 .and()                  //bulider模式，返回对象本身
                 .authorizeRequests()
                 .antMatchers("/", "/test/hello", "/user/login").permitAll()  //设置白名单

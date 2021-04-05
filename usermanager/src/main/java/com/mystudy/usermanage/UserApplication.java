@@ -2,6 +2,7 @@ package com.mystudy.usermanage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 /**
  * @author ：songdalin
@@ -34,6 +35,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+//开启注解
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class UserApplication {
     public static void main(String[] args){
         SpringApplication.run(UserApplication.class, args);

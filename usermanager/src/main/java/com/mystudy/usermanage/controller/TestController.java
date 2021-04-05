@@ -1,5 +1,6 @@
 package com.mystudy.usermanage.controller;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
+    //注解表示需要的权限
+    @Secured({"ROLE_admins"})
     @GetMapping("/hello")
     public String test() {
         return "success";
     }
+
 
     @GetMapping("/index")
     public String index() {
