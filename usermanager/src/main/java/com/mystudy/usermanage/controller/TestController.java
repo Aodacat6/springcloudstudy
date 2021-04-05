@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @version: 1.0
  */
 @RestController
-@RequestMapping
+@RequestMapping("/test")
 public class TestController {
 
-    @GetMapping("/test")
+    @GetMapping("/hello")
     public String test() {
         return "success";
+    }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
     }
 }
