@@ -1,5 +1,6 @@
 package com.mystudy.usermanage.config;
 
+import com.mystudy.usermanage.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +10,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+
+import javax.sql.DataSource;
 
 /**
  * @author ：songdalin
@@ -22,6 +27,16 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    private DataSource dataSource;
+
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository() {
+        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+        jdbcTokenRepository.setDataSource(dataSource);
+        return jdbcTokenRepository;
+    }
 
     /**
      * security 配置登录用户方法三：  自定义实现方法
@@ -72,6 +87,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 //.hasRole("admins")
                 .hasAnyRole("admins,user")
                 .anyRequest().authenticated()  //除了白名单，都需要验证
+                .and().rememberMe().tokenRepository(persistentTokenRepository())  //开启rememberme，设置tokenrepository
+                .tokenValiditySeconds(60)  //token有效期
+                .userDetailsService(userDetailsService)  //rememberme用
                 .and()
                 .csrf().disable();
     }
