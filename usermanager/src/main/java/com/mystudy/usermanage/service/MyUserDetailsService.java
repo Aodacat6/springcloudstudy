@@ -45,8 +45,10 @@ public class MyUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("用户名不存在");
         }
         SysUser sysUser = optional.get();
+
+        //设置用户角色权限
         List<GrantedAuthority> list =
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin");
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admins");
         return new User(sysUser.getLoginName(), new BCryptPasswordEncoder().encode(sysUser.getPassword()), list);
     }
 

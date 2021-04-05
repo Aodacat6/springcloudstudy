@@ -57,6 +57,10 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()                  //bulider模式，返回对象本身
                 .authorizeRequests()
                 .antMatchers("/", "/test/hello", "/user/login").permitAll()  //设置白名单
+                .antMatchers("/test/index")
+                //设置需要的权限 (单指一个权限)
+                //.hasAuthority("admins")
+                .hasAnyAuthority("admins,user")
                 .anyRequest().authenticated()  //除了白名单，都需要验证
                 .and()
                 .csrf().disable();
