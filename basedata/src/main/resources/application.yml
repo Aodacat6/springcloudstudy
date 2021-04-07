@@ -1,6 +1,12 @@
 server:
   port: 8080
 
+  #开启压缩
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types: ["text/html","text/xml","application/xml","application/json","application/octet-stream"]
+
 spring:
   application:
     name: basedata
@@ -19,4 +25,25 @@ info:
     name: ${spring.application.name}
 
 
+feign:
 
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+#okhttp配置
+okhttp:
+  #单位秒
+  connect-timeout: 120
+  read-timeout: 120
+  write-timeout: 120
+  retry-on-connection-failure: false
+  #连接池配置
+  maxIdleConnections: 100
+  #单位分钟
+  keepAliveDuration: 5

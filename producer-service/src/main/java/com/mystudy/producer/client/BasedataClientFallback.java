@@ -1,7 +1,10 @@
 package com.mystudy.producer.client;
 
+import com.mystudy.Dtos.basedata.DispatchTaskFlightVo;
 import com.mystudy.Dtos.basedata.StudentDto;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @author ：songdalin
@@ -18,5 +21,10 @@ public class BasedataClientFallback implements BasedataClient {
         dto.setId(1);
         dto.setName("basedata server is error, this is fallback");
         return dto;
+    }
+
+    @Override
+    public List<DispatchTaskFlightVo> getjson() {
+        return null;
     }
 }
