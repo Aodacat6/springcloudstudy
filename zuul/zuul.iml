@@ -17,6 +17,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="all-dto" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.10" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter:2.0.1.RELEASE" level="project" />
@@ -54,7 +55,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.vlsi.compactmap:compactmap:1.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.andrewoma.dexx:dexx-collections:0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.4" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.eureka:eureka-core:1.9.3" level="project" />
