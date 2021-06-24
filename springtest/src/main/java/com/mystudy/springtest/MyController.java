@@ -1,8 +1,13 @@
 package com.mystudy.springtest;
 
+import com.mystudy.springtest.service.EnvironmentTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.swing.text.html.HTML;
 
 /**
  * @author ：songdalin
@@ -15,11 +20,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class MyController {
 
+    @Autowired
+    public void setEnvironmentTest(EnvironmentTest environmentTest) {
+        this.environmentTest = environmentTest;
+    }
+
+    private EnvironmentTest environmentTest;
+
+/*    @Autowired
+    public MyController(EnvironmentTest environmentTest){
+        this.environmentTest = environmentTest;
+    }*/
+
+
+
+
     @GetMapping("/test")
     public String hello() throws Exception {
-        if (1 ==1) {
-            throw new Exception("dd");
-        }
-        return "return success";
+
+        return environmentTest.getName();
     }
 }

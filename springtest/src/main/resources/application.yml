@@ -1,5 +1,11 @@
 server:
   port: 8080
 
+
 airport:
   name: tgo
+
+
+spring:
+  application:
+    name: tgo

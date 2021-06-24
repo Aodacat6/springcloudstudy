@@ -36,6 +36,8 @@
         <module>other-test</module>
         <module>cloudstream</module>
         <module>springtest</module>
+        <module>javase-test</module>
+        <module>nacostest</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,4 @@
+spring:
+  autoconfigure:
+    #排除eureka注册中心
+    exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
