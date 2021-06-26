@@ -1,6 +1,6 @@
 spring:
   application:
-    name: nacos-tsst
+    name: nacos-tsst2
 
   autoconfigure:
     #排除eureka注册中心
