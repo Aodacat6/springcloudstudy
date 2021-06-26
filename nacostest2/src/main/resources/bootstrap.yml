@@ -1,3 +1,5 @@
+
+
 spring:
   application:
     name: nacos-tsst2
@@ -20,3 +22,5 @@ spring:
         file-extension: yaml
         #nacos配置中心文件名
         prefix: api-hdys-durid-sys
+server:
+  port: 8080
