@@ -21,6 +21,7 @@ public class TestController implements EnvironmentAware {
 
     @GetMapping("/getstr")
     public String getStr(String a) {
+        System.out.println("进入了getstr。。。。。。");
         return "nacos2 out : " + a + "port: " + port;
     }
 
