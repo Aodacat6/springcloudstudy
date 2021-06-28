@@ -13,7 +13,7 @@ import javax.swing.*;
  * @modified By：
  * @version: 1.0
  */
-@Component
+@Component("environmenttest")
 public class EnvironmentTest implements EnvironmentAware {
 
     public String getName() {

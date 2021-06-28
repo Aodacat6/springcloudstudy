@@ -1,6 +1,8 @@
 package com.mystudy.springtest;
 
+import com.mystudy.springtest.aware.SomeAwareInterfaceTest;
 import com.mystudy.springtest.service.EnvironmentTest;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,14 +20,14 @@ import javax.swing.text.html.HTML;
  */
 @RestController
 @RequestMapping
-public class MyController {
+public class MyController implements BeanNameAware {
 
-    @Autowired
+/*    @Autowired
     public void setEnvironmentTest(EnvironmentTest environmentTest) {
         this.environmentTest = environmentTest;
     }
 
-    private EnvironmentTest environmentTest;
+    private EnvironmentTest environmentTest;*/
 
 /*    @Autowired
     public MyController(EnvironmentTest environmentTest){
@@ -38,6 +40,13 @@ public class MyController {
     @GetMapping("/test")
     public String hello() throws Exception {
 
-        return environmentTest.getName();
+       // return environmentTest.getName();
+        EnvironmentTest test =  (EnvironmentTest)SomeAwareInterfaceTest.getByName("environmenttest");
+        return test.getName();
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("bean名字是：" + name);
     }
 }
