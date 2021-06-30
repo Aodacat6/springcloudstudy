@@ -37,9 +37,9 @@ public class MyFilter implements Filter {
         byte[] bytes = new byte[1024];
         request.getInputStream().readLine(bytes, 0 , 1024);
         System.out.println("input==" + new String(bytes));
-        if (null  == request.getAttribute("cookies")) {
+/*        if (null  == request.getAttribute("cookies")) {
             throw new AuthenticationException("no cookie");
-        }
+        }*/
         System.out.println("====doFilter==================");
         chain.doFilter(request, response);
     }

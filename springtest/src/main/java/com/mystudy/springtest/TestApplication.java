@@ -1,7 +1,10 @@
 package com.mystudy.springtest;
 
+import com.mystudy.springtest.properties.MyAddress;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * @author ：songdalin
@@ -10,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @modified By：
  * @version: 1.0
  */
+@EnableConfigurationProperties(MyAddress.class)
 @SpringBootApplication
 public class TestApplication {
 

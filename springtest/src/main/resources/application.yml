@@ -9,3 +9,9 @@ airport:
 spring:
   application:
     name: tgo
+
+
+myaddress:
+  sheng: shandong
+  shi: qingdao
+  qu: chengyang

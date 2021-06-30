@@ -4,6 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
@@ -21,6 +22,11 @@ public class SomeAwareInterfaceTest implements ApplicationContextAware, BeanName
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         SomeAwareInterfaceTest.applicationContext = applicationContext;
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        String[] names = context.getBeanDefinitionNames();
+        for (String name : names) {
+            System.out.println("取得的beandefinitionname：" + name);
+        }
     }
 
     public static  <T> T getByName(String name) {

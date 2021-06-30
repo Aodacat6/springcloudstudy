@@ -1,6 +1,7 @@
 package com.mystudy.springtest;
 
 import com.mystudy.springtest.aware.SomeAwareInterfaceTest;
+import com.mystudy.springtest.properties.MyAddress;
 import com.mystudy.springtest.service.EnvironmentTest;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ import javax.swing.text.html.HTML;
 @RequestMapping
 public class MyController implements BeanNameAware {
 
+    @Autowired
+    private MyAddress myAddress;
+
 /*    @Autowired
     public void setEnvironmentTest(EnvironmentTest environmentTest) {
         this.environmentTest = environmentTest;
@@ -41,8 +45,10 @@ public class MyController implements BeanNameAware {
     public String hello() throws Exception {
 
        // return environmentTest.getName();
-        EnvironmentTest test =  (EnvironmentTest)SomeAwareInterfaceTest.getByName("environmenttest");
-        return test.getName();
+      /*  EnvironmentTest test =  (EnvironmentTest)SomeAwareInterfaceTest.getByName("environmenttest");
+        return test.getName();*/
+        //MyAddress myAddress = SomeAwareInterfaceTest.getByName("myAddress");
+        return myAddress.toString();
     }
 
     @Override
