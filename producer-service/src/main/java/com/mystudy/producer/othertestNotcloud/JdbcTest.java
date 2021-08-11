@@ -1,3 +1,4 @@
+/*
 package com.mystudy.producer.othertestNotcloud;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -9,13 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.awt.*;
 import java.sql.*;
 
+*/
 /**
  * @author ：songdalin
  * @date ：2021-02-09 下午 03:35
  * @description：
  * @modified By：
  * @version: 1.0
- */
+ *//*
+
 @RestController
 @RequestMapping
 public class JdbcTest {
@@ -119,3 +122,4 @@ public class JdbcTest {
         return "false";
     }
 }
+*/

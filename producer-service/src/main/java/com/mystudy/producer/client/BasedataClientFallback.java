@@ -1,3 +1,4 @@
+/*
 package com.mystudy.producer.client;
 
 import com.mystudy.Dtos.basedata.DispatchTaskFlightVo;
@@ -6,13 +7,15 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+*/
 /**
  * @author ：songdalin
  * @date ：2021-02-01 下午 05:06
  * @description：hystrix熔断
  * @modified By：
  * @version: 1.0
- */
+ *//*
+
 @Component
 public class BasedataClientFallback implements BasedataClient {
 
@@ -28,3 +31,4 @@ public class BasedataClientFallback implements BasedataClient {
         return null;
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.mystudy.producer;
 
 import com.netflix.client.config.IClientConfig;
@@ -8,13 +9,15 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+*/
 /**
  * @author ：songdalin
  * @date ：2021-02-07 下午 06:34
  * @description：
  * @modified By：
  * @version: 1.0
- */
+ *//*
+
 
 public class MyRibbonRule extends AbstractLoadBalancerRule {
 
@@ -57,9 +60,11 @@ public class MyRibbonRule extends AbstractLoadBalancerRule {
                 return null;
             }
 
-            /**
+            */
+/**
              * 自定义选择器
-             */
+             *//*
+
             //初始
             if (i < 5) {
                 i++;
@@ -76,7 +81,9 @@ public class MyRibbonRule extends AbstractLoadBalancerRule {
             server = allServers.get(lastServer);
 
             if (server == null) {
-                /* Transient. */
+                */
+/* Transient. *//*
+
                 Thread.yield();
                 continue;
             }
@@ -104,3 +111,4 @@ public class MyRibbonRule extends AbstractLoadBalancerRule {
     public void initWithNiwsConfig(IClientConfig clientConfig) {
     }
 }
+*/

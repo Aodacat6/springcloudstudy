@@ -17,40 +17,40 @@ spring:
     username: root
     password: root
 
-eureka:
-  instance:
-    #以IP地址注册到服务中心，相互注册使用IP地址
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka
-
-#用于审计接口  actuator/info 返回信息
-info:
-  app:
-    name: ${spring.application.name}
-
-feign:
-  hystrix:
-    enabled: true
-
-  httpclient:
-    enabled: false
-  okhttp:
-    enabled: true
-
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
-
-#okhttp配置
-okhttp:
-  #单位秒
-  connect-timeout: 120
-  read-timeout: 120
-  write-timeout: 120
-  retry-on-connection-failure: false
-  #连接池配置
-  maxIdleConnections: 100
-  #单位分钟
-  keepAliveDuration: 5
+#eureka:
+#  instance:
+#    #以IP地址注册到服务中心，相互注册使用IP地址
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8761/eureka
+#
+##用于审计接口  actuator/info 返回信息
+#info:
+#  app:
+#    name: ${spring.application.name}
+#
+#feign:
+#  hystrix:
+#    enabled: true
+#
+#  httpclient:
+#    enabled: false
+#  okhttp:
+#    enabled: true
+#
+#ribbon:
+#  ReadTimeout: 60000
+#  ConnectTimeout: 60000
+#
+##okhttp配置
+#okhttp:
+#  #单位秒
+#  connect-timeout: 120
+#  read-timeout: 120
+#  write-timeout: 120
+#  retry-on-connection-failure: false
+#  #连接池配置
+#  maxIdleConnections: 100
+#  #单位分钟
+#  keepAliveDuration: 5

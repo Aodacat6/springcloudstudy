@@ -1,9 +1,10 @@
 package com.mystudy.producer;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+//import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author ：songdalin
@@ -13,8 +14,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @version: 1.0
  */
 @SpringBootApplication
-@EnableEurekaClient
-@EnableFeignClients
+//@EnableEurekaClient
+//@EnableFeignClients
+@MapperScan(value = {"com.mystudy.producer.mapper"})
 public class ProducerApplication {
 
     public static void main(String[] args){

@@ -1,3 +1,4 @@
+/*
 package com.mystudy.producer.configuration;
 
 import feign.Feign;
@@ -14,13 +15,15 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.TimeUnit;
 
+*/
 /**
  * @author ：songdalin
  * @date ：2020/9/14 下午 03:22
  * @description：okhttp配置
  * @modified By：
  * @version: 1.0
- */
+ *//*
+
 @Slf4j
 @Configuration
 @ConditionalOnClass(Feign.class)
@@ -53,13 +56,16 @@ public class OkHttpConfig {
                 .writeTimeout(writeTimeout, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(retryOnConnectionFailure)
                 .connectionPool(new ConnectionPool(maxIdleConnections , keepAliveDuration, TimeUnit.MINUTES))
+*/
 /*                .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
                         log.info("okhttp:");
                         return chain.proceed(chain.request());
                     }
-                })*/
+                })*//*
+
                 .build();
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.mystudy.producer.controller;
 
 import com.mystudy.Dtos.basedata.DispatchTaskFlightVo;
@@ -13,13 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 
+*/
 /**
  * @author ：songdalin
  * @date ：2021-01-28 下午 04:03
  * @description：
  * @modified By：
  * @version: 1.0
- */
+ *//*
+
 @Slf4j
 @RestController
 @RequestMapping("/producer")
@@ -51,3 +54,4 @@ public class ProducerController {
 
 
 }
+*/
